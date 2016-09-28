@@ -90,7 +90,6 @@ public class JustifyTextView extends TextView {
         } else {
             drawDBCLines(canvas, text);
         }
-        canvas.restore();
     }
 
     private void drawSBCLines(Canvas canvas, String text) {
