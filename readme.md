@@ -1,16 +1,33 @@
-#JustifyTextView
-TextView在换行时常常会出现参差不齐的情况，JustifyTextView就是为了解决这样的问题而来的。当然，这个自定义View主要用于学习研究，
-请谨慎用于实际项目。
+# JustifyTextView
+这个项目是初学开发时写的，当时因为 TextView 行尾出现参差不齐的情况纠结了好一阵，所以才想到去自定义一个 TextView
 
-##使用
+近日看到这两篇文章，才想起之前写的这个
 
-####gradle
+[微信团队披露：微信界面卡死超级bug“15。。。。”的来龙去脉](https://zhuanlan.zhihu.com/p/29996576)
+
+[能不能先把脑袋理清楚再自吹自擂——评《微信界面卡死超级bug“15。。。。”的来龙去脉》一文](https://zhuanlan.zhihu.com/p/30050183)
+
+## 使用
+
+#### gradle
+
 ```
-dependencies {
-    compile 'io.github.leibnik:justifytextview:1.0.2'
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
 ```
-####xml
+
+```
+dependencies {
+    compile 'com.github.nyakokishi:JustifyTextView:1.0'
+}
+```
+
+#### xml
+
 ```xml
 <io.github.leibnik.justifytextview.JustifyTextView
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -26,20 +43,17 @@ dependencies {
 
 `app:character_space`：配置字符间距
 
-`app:align_chars`：是否完全对齐字符，默认完全对齐，仅在文本包含CJK字符时有效
+`app:align_chars`：是否完全对齐字符，默认完全对齐，仅在文本包含 CJK 字符时有效
 
-##全角半角混排效果
+## 效果
 
-####全角半角完全对齐
+#### 下图为居中‘硬’对齐效果23333：
+
 ![](http://ww3.sinaimg.cn/mw690/b5405c76gw1f2sa7nkghhj20de0l50w5.jpg)
-####仅全角对齐
+
+#### 下图为居中‘软’对齐效果hhhhh：
+
 ![](http://ww4.sinaimg.cn/mw690/b5405c76gw1f2sa7n2s6yj20dc0l60w8.jpg)
-##英文效果
-![](http://ww4.sinaimg.cn/mw690/b5405c76gw1f2sa24plh0j20dc0l6wi3.jpg)
-
-##中文效果
-![](http://ww2.sinaimg.cn/mw690/b5405c76gw1f2sa24iog3j20dc0l6ac3.jpg)
-
 
 # License
 
